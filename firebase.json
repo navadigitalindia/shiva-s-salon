@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "package.json",
+      "README.md",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|png|webp|avif|svg|gif)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, immutable" }]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      }
+    ],
+    "rewrites": [
+      { "source": "/services", "destination": "/pages/services.html" },
+      { "source": "/gallery", "destination": "/pages/gallery.html" },
+      { "source": "/pricing", "destination": "/pages/pricing.html" },
+      { "source": "/contact", "destination": "/pages/contact.html" }
+    ]
+  }
+}

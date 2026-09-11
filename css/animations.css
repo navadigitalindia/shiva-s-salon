@@ -1,0 +1,98 @@
+/* ==========================================================================
+   ANIMATION STATES
+   These classes set up initial/hidden states for GSAP-driven reveals.
+   If JS fails to load, content still is visible (progressive enhancement
+   is handled by main.js adding a `js-ready` class before revealing).
+   ========================================================================== */
+
+.js-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.js-ready [data-reveal-fade] {
+  opacity: 0;
+}
+
+.js-ready [data-reveal-scale] {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-ready [data-reveal],
+  .js-ready [data-reveal-fade],
+  .js-ready [data-reveal-scale] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s var(--ease-out), visibility 0.7s var(--ease-out);
+}
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-mark {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-dark);
+  opacity: 0;
+  animation: loaderPulse 1.6s ease-in-out infinite;
+}
+.loader-mark span { color: var(--color-olive-deep); }
+
+@keyframes loaderPulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* Idle float used as CSS fallback (also mirrored in three-scene.js) */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-fallback {
+  animation: floatY 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-fallback { animation: none; }
+}
+
+/* Counter number ticking uses plain text updates via JS; no keyframes needed */
+
+/* Toast (used for booking / whatsapp fallback messaging) */
+.toast {
+  position: fixed;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translate(-50%, 12px);
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: 0.85rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  z-index: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}

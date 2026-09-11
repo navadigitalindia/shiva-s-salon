@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Shiva's Salon | Premium Men's Grooming & Styling</title>
+<meta name="description" content="Shiva's Salon offers premium men's haircuts, beard styling, hair color, facials, head massage and complete grooming services. Book your appointment today." />
+<link rel="canonical" href="https://shivassalon.example.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Shiva's Salon" />
+<meta property="og:title" content="Shiva's Salon | Premium Men's Grooming & Styling" />
+<meta property="og:description" content="Precision cuts, refined styling and exceptional grooming — all under one roof. Book your appointment at Shiva's Salon today." />
+<meta property="og:url" content="https://shivassalon.example.com/" />
+<meta property="og:image" content="https://shivassalon.example.com/assets/images/salon/og-cover.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shiva's Salon | Premium Men's Grooming & Styling" />
+<meta name="twitter:description" content="Precision cuts, refined styling and exceptional grooming — all under one roof." />
+<meta name="twitter:image" content="https://shivassalon.example.com/assets/images/salon/og-cover.jpg" />
+
+<meta name="theme-color" content="#F4F6F1" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/3d-effects.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Shiva's Salon",
+  "image": "https://shivassalon.example.com/assets/images/salon/og-cover.jpg",
+  "@id": "https://shivassalon.example.com/",
+  "url": "https://shivassalon.example.com/",
+  "telephone": "+91-98765-43210",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12 MG Road, Near City Centre",
+    "addressLocality": "Tanuku",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "534211",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "20:00" }
+  ],
+  "sameAs": ["https://instagram.com/", "https://facebook.com/", "https://youtube.com/"]
+}
+</script>
+</head>
+<body>
+
+<!-- ================= LOADER ================= -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">Shiva<span>'s</span> Salon</div>
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav" id="site-nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Shiva's Salon home">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" stroke="#263027" stroke-width="1.2"/>
+        <path d="M12 13l16 14M28 13L16.5 22.5M12 27l4-3.2" stroke="#8FA58A" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="13" r="1.6" fill="#263027"/>
+        <circle cx="12" cy="27" r="1.6" fill="#263027"/>
+      </svg>
+      <span>
+        <span class="brand-word">Shiva<span>'s</span> Salon</span><br/>
+        <span class="brand-sub">STYLE · GROOM · CONFIDENCE</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#top" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#booking" class="btn btn-primary nav-cta">Book Now <span class="arrow">→</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#top">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-foot">
+    <a href="#booking" class="btn btn-primary btn-block">Book Appointment <span class="arrow">→</span></a>
+    <a href="#" class="btn btn-ghost btn-block" data-wa-href data-wa-message="Hello Shiva's Salon, I'd like to know more.">Message on WhatsApp</a>
+  </div>
+</div>
+
+<!-- ================= MOBILE STICKY CTA ================= -->
+<div class="mobile-cta-bar">
+  <a href="#booking" class="btn btn-primary btn-block">Book Appointment <span class="arrow">→</span></a>
+</div>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero hero-editorial">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-wash"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="script-accent">Luxury Grooming</span>
+        <span class="eyebrow">Men's Grooming Studio</span>
+        <h1 class="hero-title">LOOK SHARP.<br/><span class="accent">FEEL CONFIDENT.</span></h1>
+        <p class="hero-sub">Premium Men's Grooming &amp; Styling</p>
+        <p class="hero-desc">Precision cuts, refined styling and exceptional grooming — all under one roof.</p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Book Appointment <span class="arrow">→</span></a>
+          <a href="#services" class="hero-scroll-cue">Explore Services <span class="arrow">↓</span></a>
+          <div class="hero-social-pills" aria-label="Social channels">
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="4"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-trust hero-trust-bar">
+          <div class="stat"><div class="stat-num">5K+</div><div class="stat-label">Happy Clients</div><div class="stat-bar"></div></div>
+          <div class="stat"><div class="stat-num">4.9/5</div><div class="stat-label">Rating</div><div class="stat-bar"></div></div>
+          <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div><div class="stat-bar"></div></div>
+        </div>
+      </div>
+
+      <div class="hero-stage hero-stage-editorial">
+        <div class="hero-portrait-frame">
+          <img src="assets/images/hero.jpg" alt="Shiva's Salon Grooming & Styling" class="hero-portrait-img" />
+          <div class="hero-portrait-blend"></div>
+          <div class="hero-floating-tag">
+            <span class="tag-title">Shiva's Salon</span>
+            <span class="tag-sub">Master Grooming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="section-pad">
+    <div class="ambient-3d-backdrop" aria-hidden="true">
+      <div class="ambient-orb ambient-orb-2"></div>
+      <div class="ambient-ring ambient-ring-2"></div>
+    </div>
+    <div class="container">
+      <div class="services-head-row">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Our Services</span>
+          <h2>Complete grooming.<br/>Under one roof.</h2>
+        </div>
+        <p class="lede text-muted" style="max-width:360px;" data-reveal>From a precise haircut to a full grooming ritual — every service is delivered with care, consistency and premium products.</p>
+      </div>
+
+      <div class="services-grid" id="services-grid"><!-- rendered by main.js --></div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section-pad bg-light">
+    <div class="container about-grid">
+      <div class="about-media" data-reveal-scale>
+        <div class="ph ph-3" style="position:absolute;inset:0;"></div>
+        <div class="frame-line"></div>
+      </div>
+
+      <div class="about-copy">
+        <span class="eyebrow" data-reveal>Our Story</span>
+        <h2 data-reveal>More than a salon.<br/>It's an experience.</h2>
+        <p class="lede" data-reveal>At Shiva's Salon, grooming is more than a routine. It's a personal experience built around precision, comfort and confidence. Our team combines modern techniques with timeless style to help every client leave looking and feeling their best.</p>
+
+        <div class="stat-grid">
+          <div class="stat-item" data-reveal>
+            <div class="stat-num"><span data-counter="10">0</span>+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-num"><span data-counter="5" data-counter-suffix="K+">0</span></div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-num"><span data-counter="20">0</span>+</div>
+            <div class="stat-label">Grooming Services</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-num"><span data-counter="100" data-counter-suffix="%">0</span></div>
+            <div class="stat-label">Client Focused</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNATURE EXPERIENCE ================= -->
+  <section class="signature">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Signature Experience</span>
+        <h2>From cut to confidence.</h2>
+      </div>
+
+      <div class="signature-stage">
+        <div class="sig-steps">
+          <div class="sig-step active">
+            <div class="sig-step-num">01</div>
+            <h3>Cut</h3>
+            <p>A precision haircut shaped around your face, your hair type and how you actually want to look.</p>
+          </div>
+          <div class="sig-step">
+            <div class="sig-step-num">02</div>
+            <h3>Style</h3>
+            <p>Finished with the right texture and product — polished for the day, not stiff or overdone.</p>
+          </div>
+          <div class="sig-step">
+            <div class="sig-step-num">03</div>
+            <h3>Groom</h3>
+            <p>Beard, skin and detailing brought together so every part of the look feels intentional.</p>
+          </div>
+          <div class="sig-step">
+            <div class="sig-step-num">04</div>
+            <h3>Confidence</h3>
+            <p>You walk out set for whatever's next — sharper, calmer, and completely yourself.</p>
+          </div>
+        </div>
+
+        <div class="sig-visual">
+          <div class="sig-visual-glow"></div>
+        </div>
+      </div>
+
+      <div class="sig-progress"><div class="sig-progress-bar"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing" class="section-pad">
+    <div class="ambient-3d-backdrop" aria-hidden="true">
+      <div class="ambient-orb ambient-orb-3"></div>
+    </div>
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Popular Packages</span>
+        <h2>Simple pricing, premium results.</h2>
+        <p class="lede">Bundle your favourite services and save. Prices shown are starting rates — final pricing is confirmed in-salon.</p>
+      </div>
+
+      <div class="pricing-grid" id="pricing-grid"><!-- rendered by main.js --></div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="section-pad bg-light">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Our Work</span>
+        <h2>Real transformations.<br/>Real confidence.</h2>
+      </div>
+
+      <div class="gallery-filters" role="tablist" aria-label="Filter gallery by category">
+        <button class="gallery-filter active" data-filter="All">All</button>
+        <button class="gallery-filter" data-filter="Haircut">Haircut</button>
+        <button class="gallery-filter" data-filter="Beard">Beard</button>
+        <button class="gallery-filter" data-filter="Styling">Styling</button>
+        <button class="gallery-filter" data-filter="Color">Color</button>
+        <button class="gallery-filter" data-filter="Salon">Salon</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid"><!-- rendered by main.js --></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+    <div class="lightbox-frame">
+      <div class="ph" id="lightbox-media" style="position:absolute;inset:0;"></div>
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+      <span id="lightbox-tag" style="position:absolute;bottom:1rem;left:1rem;color:#fff;font-size:.8rem;background:rgba(0,0,0,.35);padding:.35rem .8rem;border-radius:999px;"></span>
+    </div>
+  </div>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">What Our Clients Say</span>
+        <h2>Trusted by thousands of sharp-dressed regulars.</h2>
+      </div>
+
+      <div class="testimonial-track-wrap">
+        <div class="testimonial-track" id="testimonial-track"><!-- rendered by main.js --></div>
+      </div>
+      <div class="testimonial-nav" id="testimonial-nav"></div>
+    </div>
+  </section>
+
+  <!-- ================= BOOKING ================= -->
+  <section id="booking" class="section-pad bg-sage">
+    <div class="container">
+      <div class="booking-panel">
+        <div class="booking-side">
+          <div>
+            <span class="eyebrow" style="color:var(--color-sage);">Book Your Appointment</span>
+            <h2 style="margin-top:.9rem;">Your next great look is just a click away.</h2>
+            <p class="lede">Fill in your details and we'll open WhatsApp with everything pre-filled — confirm your slot directly with the salon.</p>
+          </div>
+          <ul class="booking-side-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA58A" stroke-width="1.6"><path d="M5 12l4 4L19 6"/></svg> Instant WhatsApp confirmation</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA58A" stroke-width="1.6"><path d="M5 12l4 4L19 6"/></svg> No account or app download needed</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA58A" stroke-width="1.6"><path d="M5 12l4 4L19 6"/></svg> Flexible rescheduling on request</li>
+          </ul>
+        </div>
+
+        <div class="booking-form-wrap">
+          <form id="booking-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field full" data-field="name">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="name" autocomplete="name" placeholder="e.g. Rahul Sharma" />
+                <span class="field-error"></span>
+              </div>
+
+              <div class="form-field full" data-field="phone">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. 98765 43210" />
+                <span class="field-error"></span>
+              </div>
+
+              <div class="form-field full" data-field="service">
+                <label for="service">Service</label>
+                <select id="service" name="service"></select>
+                <span class="field-error"></span>
+              </div>
+
+              <div class="form-field" data-field="date">
+                <label for="pref-date">Preferred Date</label>
+                <input type="date" id="pref-date" name="date" />
+                <span class="field-error"></span>
+              </div>
+
+              <div class="form-field" data-field="time">
+                <label for="pref-time">Preferred Time</label>
+                <input type="time" id="pref-time" name="time" />
+                <span class="field-error"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block form-submit">Book Appointment <span class="arrow">→</span></button>
+            <p class="form-note">We'll open WhatsApp with your details pre-filled — nothing is booked until you tap send.</p>
+            <p class="form-alt" id="booking-alt"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Visit Shiva's Salon</span>
+        <h2>We'd love to have you in the chair.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" data-reveal>
+            <div class="contact-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#263027" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2Z"/></svg></div>
+            <div>
+              <h4>Call or WhatsApp</h4>
+              <p data-phone-text>+91 98765 43210</p>
+              <div class="contact-actions">
+                <a href="#" class="btn btn-sm btn-primary" data-phone-href>Call Now</a>
+                <a href="#" class="btn btn-sm btn-ghost" data-wa-href data-wa-message="Hello Shiva's Salon, I'd like to know more.">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item" data-reveal>
+            <div class="contact-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#263027" stroke-width="1.6"><path d="M4 4h16v16H4V4Z"/><path d="M4 6l8 7 8-7"/></svg></div>
+            <div>
+              <h4>Email</h4>
+              <p data-email-text>hello@shivassalon.com</p>
+              <div class="contact-actions">
+                <a href="#" class="btn btn-sm btn-ghost" data-email-href>Send Email</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item" data-reveal>
+            <div class="contact-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#263027" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+            <div>
+              <h4>Address</h4>
+              <p data-address-text>12 MG Road, Near City Centre, Tanuku, Andhra Pradesh 534211</p>
+              <div class="contact-actions">
+                <a href="#" class="btn btn-sm btn-ghost" data-maps-href target="_blank" rel="noopener">Get Directions</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item" data-reveal>
+            <div class="contact-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#263027" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div>
+            <div>
+              <h4>Opening Hours</h4>
+              <div id="hours-list" style="font-size:.92rem;color:var(--color-muted);margin-top:.3rem;line-height:1.7;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-embed" data-reveal-fade>
+          <iframe data-map-embed title="Shiva's Salon location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-word">Shiva<span>'s</span> Salon</span>
+        <p>Premium men's grooming and styling — precision cuts, refined beard work and a calm, confident finish every visit.</p>
+        <div class="footer-social">
+          <a href="#" data-social-instagram target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" data-social-facebook target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.8-3H14v-1.5c0-.5.3-1 1-1h2V8Z"/></svg></a>
+          <a href="#" data-social-youtube target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10l4 2-4 2v-4Z" fill="#fff" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Haircut</a></li>
+          <li><a href="#services">Beard Styling</a></li>
+          <li><a href="#services">Hair Color</a></li>
+          <li><a href="#services">Facial</a></li>
+          <li><a href="#services">Hair Spa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="#" data-phone-href data-phone-text></a></li>
+          <li><a href="#" data-email-href data-email-text></a></li>
+          <li><a href="#" data-maps-href target="_blank" rel="noopener">Get Directions</a></li>
+          <li><a href="#booking" class="btn btn-sm btn-outline-light" style="margin-top:.5rem;">Book Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Shiva's Salon. All Rights Reserved.</span>
+      <span>Designed for modern men's grooming.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

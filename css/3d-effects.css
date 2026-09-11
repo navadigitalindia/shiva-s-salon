@@ -1,0 +1,458 @@
+/* ==========================================================================
+   SHIVA'S SALON — EDITORIAL LUXURY DESIGN LAYER
+   Inspired by High-End Salon & Skincare Editorial Layouts
+   Brand Colors Strictly Preserved:
+   White (#FFFFFF), Soft Olive Green (#8FA58A), Light Sage (#DDE6DA),
+   Background (#F4F6F1), Charcoal (#263027), Muted (#667066)
+   ========================================================================== */
+
+/* ==========================================================================
+   EDITORIAL HERO & BLENDED BACKGROUND
+   ========================================================================== */
+
+.hero.hero-editorial {
+  position: relative;
+  min-height: 94svh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--nav-h) + 1rem);
+  padding-bottom: 3.5rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAF6 45%, #EFF3EC 75%, #DDE6DA 100%);
+  overflow: hidden;
+}
+
+.hero-bg-wash {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 65% 55% at 75% 40%, rgba(221, 230, 218, 0.65) 0%, transparent 70%),
+    radial-gradient(circle 450px at 15% 30%, rgba(143, 165, 138, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Cursive script accent above main headline (matching reference image) */
+.script-accent {
+  font-family: 'Alex Brush', cursive;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--color-olive-deep);
+  display: block;
+  margin-bottom: 0.15rem;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6.4vw, 5.2rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
+  margin-top: 0.4rem;
+}
+
+.hero-title .accent {
+  color: var(--color-olive-deep);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  letter-spacing: 0.04em;
+  margin-top: 0.8rem;
+}
+
+.hero-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 480px;
+  margin-top: 0.8rem;
+}
+
+/* Hero action bar with CTA and social pills */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.2rem;
+}
+
+.hero-social-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-social-pills a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid rgba(38, 48, 39, 0.15);
+  color: var(--color-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(38, 48, 39, 0.05);
+  transition: transform 0.25s var(--ease-out), background 0.25s var(--ease-out), color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.hero-social-pills a:hover {
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
+  transform: translateY(-2px);
+}
+
+/* Hero stats strip with underline bars (matching reference image) */
+.hero-trust-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.8rem, 4.5vw, 3.8rem);
+  margin-top: 3.2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(38, 48, 39, 0.12);
+}
+
+.hero-trust-bar .stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-trust-bar .stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.hero-trust-bar .stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+/* Accent horizontal bar under each stat */
+.hero-trust-bar .stat-bar {
+  width: 36px;
+  height: 2px;
+  background: var(--color-dark);
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  transition: width 0.35s var(--ease-out), background 0.35s var(--ease-out);
+}
+
+.hero-trust-bar .stat:hover .stat-bar {
+  width: 58px;
+  background: var(--color-olive-deep);
+}
+
+/* ==========================================================================
+   HERO PORTRAIT STAGE (EDITORIAL PHOTOGRAPHY BLEND)
+   ========================================================================== */
+
+.hero-stage.hero-stage-editorial {
+  position: relative;
+  aspect-ratio: 1 / 1.08;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 
+    0 24px 60px -15px rgba(38, 48, 39, 0.18),
+    0 12px 24px -10px rgba(143, 165, 138, 0.22);
+  border: 4px solid var(--color-white);
+  background: var(--color-light);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.hero-stage-editorial:hover .hero-portrait-img {
+  transform: scale(1.03);
+}
+
+/* Seamless gradient blend vignette over the portrait */
+.hero-portrait-blend {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(244, 246, 241, 0.12) 0%,
+    transparent 45%,
+    rgba(38, 48, 39, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+/* Floating chic tag on portrait */
+.hero-floating-tag {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 1.4rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.75rem 1.3rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(38, 48, 39, 0.14);
+  border: 1px solid rgba(143, 165, 138, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-floating-tag .tag-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.hero-floating-tag .tag-sub {
+  font-size: 0.72rem;
+  color: var(--color-olive-deep);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+/* ==========================================================================
+   SERVICE CARDS (EDITORIAL QUALITY)
+   ========================================================================== */
+
+.service-card {
+  background: var(--color-white);
+  border: 1px solid rgba(143, 165, 138, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  box-shadow: 
+    0 10px 24px -10px rgba(38, 48, 39, 0.06),
+    0 4px 8px -4px rgba(143, 165, 138, 0.05);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-olive);
+  box-shadow: 
+    0 22px 50px -15px rgba(38, 48, 39, 0.14),
+    0 10px 22px -8px rgba(143, 165, 138, 0.2);
+}
+
+.service-card-media {
+  height: 180px;
+  border-radius: calc(var(--radius-md) - 4px);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-light);
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.06);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.service-price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* ==========================================================================
+   PRICING CARDS
+   ========================================================================== */
+
+.price-card {
+  background: var(--color-white);
+  border: 1px solid rgba(143, 165, 138, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px -12px rgba(38, 48, 39, 0.08);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px -18px rgba(38, 48, 39, 0.16);
+  border-color: var(--color-olive);
+}
+
+.price-card.featured {
+  background: linear-gradient(155deg, #263027 0%, #1c241d 100%);
+  color: var(--color-white);
+  border-color: #263027;
+  box-shadow: 0 24px 60px -15px rgba(20, 26, 21, 0.35);
+  transform: translateY(-6px);
+}
+
+.price-card.featured:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 32px 75px -20px rgba(20, 26, 21, 0.45);
+}
+
+/* ==========================================================================
+   GALLERY ITEMS (EDITORIAL GRID)
+   ========================================================================== */
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 6px 18px -6px rgba(38, 48, 39, 0.1);
+  border: 1px solid rgba(143, 165, 138, 0.15);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px -12px rgba(38, 48, 39, 0.18);
+  border-color: var(--color-olive);
+}
+
+.gallery-item-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.gallery-item:hover .gallery-item-img {
+  transform: scale(1.05);
+}
+
+.gallery-item-tag {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.gallery-item:hover .gallery-item-tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   ABOUT SECTION WITH EDITORIAL FRAME
+   ========================================================================== */
+
+.about-media {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -20px rgba(38, 48, 39, 0.18);
+  border: 4px solid var(--color-white);
+  background-image: url('../assets/images/salon.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.about-media .frame-line {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: calc(var(--radius-lg) - 10px);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 940px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-stage.hero-stage-editorial {
+    aspect-ratio: 16/11;
+    order: -1;
+  }
+  .hero-trust-bar {
+    margin-top: 2.2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-social-pills {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}

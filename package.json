@@ -1,0 +1,13 @@
+{
+  "name": "shivas-salon",
+  "version": "1.0.0",
+  "description": "Shiva's Salon — premium men's grooming website. Static HTML/CSS/JS, deployable directly to Firebase Hosting.",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 5000",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  }
+}
