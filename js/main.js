@@ -111,13 +111,13 @@
     grid.innerHTML = PACKAGES.map(p => `
       <div class="price-card ${p.featured ? "featured" : ""}" data-reveal>
         ${p.badge ? `<span class="price-badge">${p.badge}</span>` : ""}
-        <h3>${p.name}</h3>
-        <p class="text-muted" style="margin-top:.4rem;font-size:.88rem;">${p.items.length} services included</p>
-        <div class="price-tag">₹${p.price}<small> / session</small></div>
+        <h3 ${p.featured ? 'style="color:#FFFFFF !important;"' : ""}>${p.name}</h3>
+        <p class="text-muted" style="margin-top:.4rem;font-size:.88rem;${p.featured ? 'color:rgba(221,230,218,0.75) !important;' : ''}">${p.items.length} services included</p>
+        <div class="price-tag" ${p.featured ? 'style="color:#FFFFFF !important;"' : ""}>₹${p.price}<small ${p.featured ? 'style="color:rgba(221,230,218,0.85) !important;"' : ""}> / session</small></div>
         <ul class="price-list">
-          ${p.items.map(i => `<li>${i}</li>`).join("")}
+          ${p.items.map(i => `<li ${p.featured ? 'style="color:#FFFFFF !important;"' : ""}>${i}</li>`).join("")}
         </ul>
-        <a href="#booking" class="btn ${p.featured ? "btn-outline-light" : "btn-ghost"} btn-block" data-service-select="${p.name} Package">Book This Package</a>
+        <a href="#booking" class="btn ${p.featured ? "btn-outline-light" : "btn-ghost"} btn-block" ${p.featured ? 'style="background:#FFFFFF !important;color:#263027 !important;border-color:#FFFFFF !important;font-weight:600 !important;box-shadow:0 4px 14px rgba(0,0,0,0.25);"' : ""} data-service-select="${p.name} Package">Book This Package</a>
       </div>
     `).join("");
 

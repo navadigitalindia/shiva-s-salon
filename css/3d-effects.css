@@ -307,7 +307,7 @@
 }
 
 /* ==========================================================================
-   PRICING CARDS
+   PRICING CARDS & FEATURED CONTRAST
    ========================================================================== */
 
 .price-card {
@@ -317,6 +317,7 @@
   padding: 2.6rem 2.2rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
   box-shadow: 0 12px 30px -12px rgba(38, 48, 39, 0.08);
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
 }
@@ -325,6 +326,20 @@
   transform: translateY(-6px);
   box-shadow: 0 26px 55px -18px rgba(38, 48, 39, 0.16);
   border-color: var(--color-olive);
+}
+
+.price-card .price-tag {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--color-dark);
+}
+
+.price-card .btn {
+  margin-top: auto;
+  padding: 0.95rem 1.6rem;
+  font-weight: 600;
+  border-radius: 999px;
+  justify-content: center;
 }
 
 .price-card.featured {
@@ -338,6 +353,49 @@
 .price-card.featured:hover {
   transform: translateY(-10px);
   box-shadow: 0 32px 75px -20px rgba(20, 26, 21, 0.45);
+}
+
+/* Fix contrast on featured dark card: crisp white title, price, list and bright action */
+.price-card.featured h3 {
+  color: #FFFFFF !important;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.price-card.featured .price-tag {
+  color: #FFFFFF !important;
+}
+
+.price-card.featured .price-tag small {
+  color: rgba(221, 230, 218, 0.85) !important;
+}
+
+.price-card.featured .text-muted {
+  color: rgba(221, 230, 218, 0.75) !important;
+}
+
+.price-card.featured .price-list li {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.price-card.featured .price-list li::before {
+  background: var(--color-sage) !important;
+}
+
+.price-card.featured .btn-outline-light {
+  background: #FFFFFF !important;
+  color: #263027 !important;
+  border-color: #FFFFFF !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+.price-card.featured .btn-outline-light:hover {
+  background: var(--color-sage) !important;
+  color: #263027 !important;
+  border-color: var(--color-sage) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* ==========================================================================
@@ -456,3 +514,222 @@
     margin-top: 0.5rem;
   }
 }
+
+/* ==========================================================================
+   BUTTON & INTERACTIVE CONTROL ENHANCEMENTS
+   ========================================================================== */
+
+/* Enhanced Base Button */
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.97) !important;
+}
+
+/* Primary Button Lift */
+.btn-primary {
+  box-shadow: 0 6px 20px -4px rgba(38, 48, 39, 0.28);
+}
+
+.btn-primary:hover {
+  background: var(--color-olive-deep);
+  box-shadow: 0 12px 28px -6px rgba(113, 136, 108, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Hero Explore Services Cue -> Luxury Ghost Pill Button */
+.hero-scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(38, 48, 39, 0.18);
+  box-shadow: 0 2px 8px rgba(38, 48, 39, 0.04);
+  transition: all 0.25s var(--ease-out);
+}
+
+.hero-scroll-cue:hover {
+  background: var(--color-white);
+  border-color: var(--color-olive-deep);
+  color: var(--color-olive-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(38, 48, 39, 0.1);
+}
+
+.hero-scroll-cue .arrow {
+  transition: transform 0.25s var(--ease-out);
+}
+
+.hero-scroll-cue:hover .arrow {
+  transform: translateY(3px);
+}
+
+/* Service Card Book Now Pill Button */
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  background: var(--color-sage);
+  padding: 0.48rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 165, 138, 0.25);
+  box-shadow: 0 2px 6px rgba(38, 48, 39, 0.04);
+  transition: all 0.25s var(--ease-out);
+}
+
+.service-link:hover {
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(38, 48, 39, 0.22);
+}
+
+.service-link .arrow {
+  transition: transform 0.25s var(--ease-out);
+}
+
+.service-link:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Booking Submit Button */
+.form-submit {
+  margin-top: 1.8rem;
+  padding: 1.15rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 999px;
+  border: 1px solid var(--color-dark);
+  box-shadow: 0 8px 24px -6px rgba(38, 48, 39, 0.35);
+  transition: all 0.25s var(--ease-out);
+}
+
+.form-submit:hover {
+  background: var(--color-olive-deep);
+  border-color: var(--color-olive-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -8px rgba(113, 136, 108, 0.5);
+}
+
+.form-submit .arrow {
+  transition: transform 0.25s var(--ease-out);
+}
+
+.form-submit:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Gallery Filter Pill Buttons */
+.gallery-filter {
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(38, 48, 39, 0.16);
+  font-size: 0.86rem;
+  font-weight: 600;
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0 2px 6px rgba(38, 48, 39, 0.04);
+  transition: all 0.25s var(--ease-out);
+}
+
+.gallery-filter:hover {
+  border-color: var(--color-olive-deep);
+  color: var(--color-olive-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(38, 48, 39, 0.08);
+}
+
+.gallery-filter.active {
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-dark);
+  box-shadow: 0 4px 14px rgba(38, 48, 39, 0.2);
+}
+
+/* Grid & Layout Equal Heights */
+.services-grid, .pricing-grid {
+  align-items: stretch;
+}
+
+.service-card, .price-card {
+  height: 100%;
+}
+
+.service-card-foot {
+  margin-top: auto;
+}
+
+/* Form Input Layout & Polish */
+.form-field input, .form-field select {
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1.1rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(38, 48, 39, 0.18);
+  background: var(--color-light);
+  transition: border-color 0.2s var(--ease-out), background-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+
+.form-field input:focus, .form-field select:focus {
+  border-color: var(--color-olive-deep);
+  background: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(143, 165, 138, 0.25);
+}
+
+/* Header & Mobile Layout Spacing */
+@media (max-width: 600px) {
+  .brand-sub, .brand br {
+    display: none !important;
+  }
+  .brand-word {
+    font-size: 1.18rem !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+  }
+  .nav {
+    height: 72px !important;
+  }
+  .nav-inner {
+    align-items: center !important;
+  }
+  .nav-actions .nav-cta {
+    display: none !important;
+  }
+  .hero-actions .hero-scroll-cue {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-actions .nav-cta {
+    display: none !important;
+  }
+}
+
+.mobile-cta-bar {
+  padding-bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 20px rgba(38, 48, 39, 0.08);
+}
+
+.mobile-menu {
+  background: #F4F6F1;
+  z-index: 150;
+}
+
